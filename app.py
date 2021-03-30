@@ -32,4 +32,4 @@ def pizza_detail(pizza_id, methods=['GET', 'POST']):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run('0.0.0.0')
