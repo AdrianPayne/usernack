@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  api-usersnack:
+      build: ./api-usersnack/
+      volumes:
+          - ./api-usersnack/:/usr/src/app/
+      ports:
+          - 5000:5000
+      environment:
+          PORT: 5000
+          FLASK_DEBUG: 1
+
+  postgres:
+    image: postgres
+    container_name: usersnack.postgres
+    env_file:
+      - .env
+    volumes:
+      - usersnack.postgres:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+volumes:
+  usersnack.postgres:
+  data01:
+    driver: local
+  data02:
+    driver: local
