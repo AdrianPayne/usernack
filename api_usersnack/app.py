@@ -1,4 +1,5 @@
 from datetime import datetime
+from decimal import Decimal
 from flask import Flask, request
 from flask_sqlalchemy import SQLAlchemy
 import json
@@ -178,7 +179,6 @@ def pizza_detail(pizza_id):
     return json.dumps(response)
 
 
-from decimal import Decimal
 @app.route('/pizzas/submit', methods=['POST'])
 def pizza_submit():
     form = SubmitForm(request.form)
