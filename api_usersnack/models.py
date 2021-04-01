@@ -1,5 +1,5 @@
 from datetime import datetime
-from api_usersnack.app import db, AWS_S3_URL
+from app import db, AWS_S3_URL
 
 
 class Extra (db.Model):

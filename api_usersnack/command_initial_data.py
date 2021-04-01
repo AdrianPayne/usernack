@@ -1,7 +1,7 @@
-import json
 import yaml
 
-from app import db, Pizza, Extra
+from app import db
+from models import Pizza, Extra
 
 if __name__ == '__main__':
 

@@ -3,8 +3,6 @@ from flask import Flask, request
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.middleware.proxy_fix import ProxyFix
 
-from api_usersnack.models import Pizza, Extra, Order
-
 # CONFIG
 app = Flask(__name__)
 app.wsgi_app = ProxyFix(app.wsgi_app)
@@ -25,16 +23,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = db_uri()
 db = SQLAlchemy(app)
 
 AWS_S3_URL = 'https://usersnack.s3.us-east-2.amazonaws.com/'
-
-
-# FORM
-from wtforms import Form, StringField, IntegerField, validators
-
-
-class SubmitForm(Form):
-    name = StringField('Name')
-    address = StringField('Address', [validators.Length(min=6, max=50)])
-    pizza = IntegerField('Pizza')
 
 
 # VIEWS
@@ -93,4 +81,7 @@ def pizza_submit():
 
 
 if __name__ == '__main__':
+    from models import Pizza, Extra, Order
+    from forms import SubmitForm
+
     app.run('0.0.0.0', debug=True)
