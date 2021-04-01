@@ -9,7 +9,7 @@ In live on [AWS](http://13.59.120.109:5000/pizzas)!
 |:----------------------:|:------:|:---------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------:|
 | /pizzas                | GET    | Return a list of all available pizzas                                 |                                                                                           |
 | /pizzas/<int:pizza_id> | GET    | Return details of the selected pizza and extra ingredients to add     |                                                                                           |
-| /pizzas/submit         | POST   | Generate an order stored in DB. Return the total amount of the order. | name: String address: String(min 6, max 50) pizza: Integer (pizza_id) extras: IntegerList |
+| /pizzas/submit         | POST   | Generate an order stored in DB. Return the total amount of the order. | name: String, address: String(min 6, max 50), pizza: Integer (pizza_id),extras: IntegerList |
 | /orders                | GET    | Return a list of all stored orders                                    |                                                                                           |
 
 ## PREREQUISITES
