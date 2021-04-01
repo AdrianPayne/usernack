@@ -2,6 +2,6 @@
 Flask and postgresql
 
 ## Run
-docker-compose up
+docker-compose-build && docker-compose up
 
 ...that's all

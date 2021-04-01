@@ -1,9 +1,9 @@
 version: '3.8'
 services:
   api-usersnack:
-      build: ./api-usersnack/
+      build: ./api_usersnack/
       volumes:
-          - ./api-usersnack/:/usr/src/app/
+          - ./api_usersnack/:/usr/src/app/
       ports:
           - 5000:5000
       environment:
@@ -12,6 +12,7 @@ services:
 
   postgres:
     image: postgres
+    restart: always
     container_name: usersnack.postgres
     env_file:
       - .env
