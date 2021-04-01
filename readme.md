@@ -1,5 +1,5 @@
 # USERSNACK
-Flask and Postgresql backend project
+Usersnack is a Flask and Postgresql API backend project. Simulate an API of a Pizza restaurant to show the offer and send orders.
 
 In live on [AWS](http://13.59.120.109:5000/pizzas)!
 
